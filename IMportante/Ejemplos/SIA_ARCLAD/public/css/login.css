@@ -1,0 +1,22 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+body { 
+  background: url(../image/produccion1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  margin: 0 auto; 
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.panel-default {
+opacity: 0.8;
+margin-top:30px;
+}
+.form-group.last { margin-bottom:0px; }
+
