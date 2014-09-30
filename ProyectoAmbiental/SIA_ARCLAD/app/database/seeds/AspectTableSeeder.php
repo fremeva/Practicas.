@@ -17,18 +17,22 @@ class AspectTableSeeder extends Seeder{
         DB::table('aspects')->delete();
         
         Aspect::create(array(
+           'id' => 1,
            'name' => 'Actividades Sujetas a Comunicación'
         ));
         
         Aspect::create(array(
+            'id' => 2,
            'name' => 'Fuentes Fijas de Emisión'
         ));
         
         Aspect::create(array(
+            'id' => 3,
            'name' => 'Fuentes Móviles de Emisión'
         ));
         
         Aspect::create(array(
+            'id' => 4,
            'name' => 'Consumo de Energía'
         ));
     }

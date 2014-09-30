@@ -60,9 +60,18 @@ Editar Requisito.
             array('class'=>'form-control'))}}
         </div>
         <div class="form-group">
-            {{Form::label('aspect_associate', 'Aspecto Asociado:')}}
-            {{Form::text('aspect_associate',null,array('placeholder'=>'Consumo de Energía','class' => 'form-control'))}}
-        </div>
+    {{Form::label('aspect_id', 'Aspecto Asociado:')}}
+    
+    <select class="form-control" name="aspect_id" value="">
+        @foreach($aspects as $aspect)
+        @if($requisite->aspect_id == $aspect->id)
+            <option value='{{$aspect->id}}' selected="selected">{{$aspect->name}}</option>
+        @else
+        <option value='{{$aspect->id}}'>{{$aspect->name}}</option>
+        @endif
+       @endforeach
+    </select>
+</div>
         
         {{Form::submit('Guardar',array('class'=>'btn btn-default'))}}
             <br /><br />

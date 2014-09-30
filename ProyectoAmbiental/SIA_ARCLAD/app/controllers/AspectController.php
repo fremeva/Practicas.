@@ -14,6 +14,8 @@ class AspectController extends \BaseController {
             return View::make('module2.aspects.aspects')->with('aspects',$aspects);
 	}
 
+        
+        
 	/**
 	 * Store a newly created resource in storage.
 	 *
@@ -45,6 +47,7 @@ class AspectController extends \BaseController {
 	{
             $aspect = Aspect::find($id);
             $aspect->delete();
+            $aspect->requisites()->delete();
             
             Session::flash('message','Aspecto ha sido Eliminado Correctamente');
             return Redirect::to('aspects');

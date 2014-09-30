@@ -13,4 +13,9 @@
  */
 class Requisite extends Eloquent{
     //put your code here
+    
+    public function aspect()
+    {
+        return $this->belongsTo('Aspect');
+    }
 }

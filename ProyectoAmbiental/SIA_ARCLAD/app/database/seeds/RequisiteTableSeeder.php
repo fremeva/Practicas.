@@ -21,7 +21,7 @@ class RequisiteTableSeeder extends Seeder{
            'month' => 'Diciembre',
            'norm' => 'Decreto/ley',
            'norm_number' => '2811',
-           'aspect_associate' => 'Capatacion de Agua',
+           'aspect_id' => 1,
            'article' => '121',
            'modifications' => 'Ninguna',
            'repeals' => 'Ninguna',

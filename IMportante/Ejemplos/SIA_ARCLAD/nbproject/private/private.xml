@@ -4,12 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/views/layouts/master.blade.php</file>
-            <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/models/User.php</file>
+            <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/storage/logs/laravel.log</file>
             <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/controllers/HomeController.php</file>
             <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/views/module2/requisites/listRequisites.blade.php</file>
+            <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/public/css/login.css</file>
             <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/views/layouts/Login.blade.php</file>
             <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/public/css/offcanvas.css</file>
             <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/routes.php</file>
+            <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/controllers/RequisiteController.php</file>
             <file>file:/C:/Users/arclad/Documents/boot/SIA_ARCLAD/app/database/seeds/UserTableSeeder.php</file>
         </group>
     </open-files>

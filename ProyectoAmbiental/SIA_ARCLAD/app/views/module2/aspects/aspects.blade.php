@@ -42,6 +42,7 @@ and open the template in the editor.
         @foreach($aspects as $aspect)
             <li class="list-group-item">
                 {{$aspect->name}}
+            
                 <button class="btn btn-warning pull-right btn-xs" data-toggle="modal" data-target="#myModal{{$aspect->id}}">
                     <span class="glyphicon glyphicon-remove"></span>
                 </button>

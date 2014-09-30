@@ -13,4 +13,8 @@
  */
 class Aspect extends Eloquent{
     //put your code here
+    public function requisites()
+    {
+        return $this->hasMany('Requisite','aspect_id');
+    }
 }

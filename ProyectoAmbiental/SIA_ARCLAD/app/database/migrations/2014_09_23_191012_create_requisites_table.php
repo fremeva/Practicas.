@@ -19,10 +19,18 @@ class CreateRequisitesTable extends Migration {
                         $table->string('month');
                         $table->string('norm');
                         $table->string('norm_number');
-                        $table->string('aspect_associate');
+                        
+                        $table->integer('aspect_id')
+                                ->unsigned();
+                        
+                        $table->foreign('aspect_id')
+                                ->references('id')->on('aspects')
+                                ->onDelete('cascade');
+                        
+                        
                         $table->string('article');
-                        $table->text('modifications')->nullable();
-			$table->text('repeals')->nullable();
+                        $table->text('modifications');
+			$table->text('repeals');
                         $table->string('state');
 			$table->timestamps();
 		});

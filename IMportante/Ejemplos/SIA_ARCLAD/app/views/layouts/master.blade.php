@@ -4,6 +4,7 @@
         <title>@yield('title')</title>
         {{ HTML::style('css/bootstrap.min.css') }}<!-- Bootstrap core CSS -->
         {{ HTML::style('css/offcanvas.css') }}<!-- Custom styles for this template -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
         <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -19,12 +20,12 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#"><i class="fa fa-home fa-lg">  </i> Inicio</a></li>
                        
                         
                         
                            <li class="dropdown">
-                <a  href="#" class="dropdown-toggle" data-toggle="dropdown">Planeación Ambiental <span class="caret"></span></a>
+                <a  href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-paper-plane-o fa-lg"></i> Planeación Ambiental <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">Objetivos Estrategicos</a></li>
                   <li><a href="#">Estrategias</a></li>
@@ -39,7 +40,7 @@
                            
                            
                               <li class="dropdown">
-                <a  href="#" class="dropdown-toggle" data-toggle="dropdown">Entrada Recursos  <span class="caret"></span></a>
+                <a  href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-database fa-lg"></i> Entrada Recursos  <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                  
                   <li class="divider"></li>
@@ -70,13 +71,13 @@
                            
                     </ul>
                     <ul class="nav navbar-nav pull-right" >   <li class="dropdown">
-                <a  href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->username}} <span class="caret"></span></a>
+                <a  href="#" class="dropdown-toggle" data-toggle="dropdown">  {{Auth::user()->username}}  <i class="fa fa-user fa-lg"></i> <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Ver perfil</a></li>
-                  <li><a href="#">Editar perfil</a></li>
+                  <li><a href="#"><i class="fa fa-eye fa-fw"> </i> Ver perfil</a></li>
+                  <li><a href="#"> <i class="fa fa-pencil fa-fw"></i> Editar perfil</a></li>
                   
                   <li class="divider"></li>
-                  <li><a href="{{URL::to('logout')}}">Logout</a></li>
+                  <li><a href="{{URL::to('logout')}}"> <i class="fa fa-power-off fa-fw"></i> Logout</a></li>
                 </ul>
           
                            </li>
@@ -95,6 +96,7 @@
                     <p class="pull-right visible-xs">
                      @yield('boton')
                         <!-- /.  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button-->
+                   
                     </p>
                     @yield('content')
                 </div><!--/span-->

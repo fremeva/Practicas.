@@ -60,7 +60,7 @@ Show Requisite
                 </tr>
                 <tr>
                     <th>Aspecto Asociado</th>
-                    <td>{{$requisite->aspect_associate}}</td>
+                    <td>{{$requisite->aspect->name}}</td>
                 </tr>
             </table><!-- Table -->
             

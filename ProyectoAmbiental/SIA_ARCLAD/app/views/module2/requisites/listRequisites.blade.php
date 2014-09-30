@@ -35,7 +35,7 @@ Requisitos
                 <td>{{$requisite->norm}}</td>
                 <td>{{$requisite->norm_number}}</td>
                 <td>{{$requisite->article}}</td>
-                <td>{{$requisite->aspect_associate}}</td>
+                <td>{{$requisite->aspect->name}}</td>
                 <td>
                     <a href="{{URL::to('requisites/'.$requisite->id)}}" type="button" class="btn btn-info" ><span class="glyphicon glyphicon-info-sign"></span> info</a>
                 </td>

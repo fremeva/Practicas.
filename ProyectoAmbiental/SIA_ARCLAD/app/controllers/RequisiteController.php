@@ -22,7 +22,8 @@ class RequisiteController extends \BaseController {
 	 */
 	public function create()
 	{
-            return View::make('module2.requisites.create');
+            $aspects = Aspect::all();
+            return View::make('module2.requisites.create')->with('aspects',$aspects);
 	}
 
 
@@ -38,7 +39,7 @@ class RequisiteController extends \BaseController {
             $requisite->month=Input::get('month');
             $requisite->norm=Input::get('norm');
             $requisite->norm_number=Input::get('norm_number');
-            $requisite->aspect_associate=Input::get('aspect_associate');
+            $requisite->aspect_id=Input::get('aspect_id');
             $requisite->article=Input::get('article');
             $requisite->modifications=Input::get('modifications');
             $requisite->repeals=Input::get('repeals');
@@ -72,7 +73,9 @@ class RequisiteController extends \BaseController {
 	public function edit($id)
 	{
             $requisite = Requisite::find($id);
-            return View::make('module2.requisites.edit')->with('requisite',$requisite);
+            $aspects = Aspect::all();
+            return View::make('module2.requisites.edit')
+                    ->with(array('aspects' => $aspects,'requisite' => $requisite));
 	}
 
 
@@ -90,7 +93,7 @@ class RequisiteController extends \BaseController {
             $requisite->month=Input::get('month');
             $requisite->norm=Input::get('norm');
             $requisite->norm_number=Input::get('norm_number');
-            $requisite->aspect_associate=Input::get('aspect_associate');
+            $requisite->aspect_id=Input::get('aspect_id');
             $requisite->article=Input::get('article');
             $requisite->modifications=Input::get('modifications');
             $requisite->repeals=Input::get('repeals');
