@@ -33,7 +33,19 @@ class EvaluationController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+            
+            $evaluation = new Evaluation();
+            $evaluation->application=Input::get('application');
+            $evaluation->specific_application=Input::get('specific_application');
+            $evaluation->compliance=Input::get('compliance');
+            $evaluation->deadline=Input::get('deadline');
+            $evaluation->information_compliance=Input::get('information_compliance');
+           
+            $evaluation->save();
+            
+            Session::flash('message','Evaluacion creada con Exito');
+            return Redirect::to('evaluations');;
+            
 	}
 
 
@@ -45,7 +57,8 @@ class EvaluationController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+            $evaluation = Evaluation::find($id);
+            return View::make('module2.evaluations.show')->with('evaluation',$evaluation);
 	}
 
 
@@ -57,7 +70,8 @@ class EvaluationController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+            $evaluation = Evaluation::find($id);
+            return View::make('module2.evaluations.edit')->with('evaluation',$evaluation);
 	}
 
 
@@ -69,7 +83,17 @@ class EvaluationController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+            $evaluation = Evaluation::find($id);
+            $evaluation->application=Input::get('application');
+            $evaluation->specific_application=Input::get('specific_application');
+            $evaluation->compliance=Input::get('compliance');
+            $evaluation->deadline=Input::get('deadline');
+            $evaluation->information_compliance=Input::get('information_compliance');
+           
+            $evaluation->save();
+            
+            Session::flash('message','Evaluacion creada con Exito');
+            return Redirect::to('evaluations/'.$id);
 	}
 
 
@@ -81,7 +105,10 @@ class EvaluationController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+            $evaluation = Evaluation::find($id);
+            $evaluation->delete();
+            Session::flash('message','Evaluacion Eliminada con Exito');
+            return Redirect::to('evaluations');
 	}
 
 

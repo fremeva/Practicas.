@@ -51,11 +51,42 @@ Show Planning
                     <td>{{$planning->plan_status}}</td>
                 </tr>
             </table><!-- Table -->
+            
+            <a class="btn btn-info" href="{{URL::to('plannings/'.$planning->id.'/edit')}}"><span class="glyphicon glyphicon-edit"></span> Editar</a>
+            <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
+            
         </div>
     </div>
     
 
 </div>
+
+<!-- Modal Javascript Boostrap -->
+    <div id="myModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">close</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Esta seguro de Eliminar la Planeacion.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    {{Form::open(array('url' => 'plannings/'.$planning->id,'class'=>'form-inline')) }}
+                    {{ Form::hidden('_method', 'DELETE') }}
+                    <button  type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    {{ Form::submit('Confirmar',array('class'=>'btn btn-danger')) }}
+                    {{Form::close()}}
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('menulateral')

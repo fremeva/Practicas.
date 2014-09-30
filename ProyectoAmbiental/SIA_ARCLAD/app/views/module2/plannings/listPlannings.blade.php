@@ -28,6 +28,7 @@ and open the template in the editor.
                 <th>Recursos Necesarios</th>
                 <th>Seguimiento</th>
                 <th>Cumplimiento</th>
+                <th>Acci&oacute;n</th>
             </tr>
             </thead>
             <tbody>
@@ -39,6 +40,9 @@ and open the template in the editor.
                 <td>{{$planning->resources}}</td>
                 <td>{{$planning->monitoring}}</td>
                 <td>{{$planning->plan_status}}</td>
+                <td>
+                    <a href="{{URL::to('plannings/'.$planning->id)}}" type="button" class="btn btn-info" ><span class="glyphicon glyphicon-info-sign"></span> info</a>
+                </td>
             </tr>
             @endforeach
             </tbody>

@@ -24,8 +24,8 @@ Show Requisite
         <p>A continuacion se muestra detalladamente el requisito legal seleccionado:</p>
     </div>
     <div class="row">
-        <div class="col-md-9">
-            <table class="table table-responsive">
+        <div class="col-md-6 col-md-offset-3">
+            <table class="table">
                 <tr>
                     <th>Año</th>
                     <td>{{$requisite->year}}</td>
@@ -85,7 +85,7 @@ Show Requisite
                 </div>
                 <div class="modal-body">
                     <p>
-                        Esta Realmente seguro de Eliminar la reserva realizada por
+                        Esta seguro de Eliminar Requisito Legal Seleccionado
                     </p>
                 </div>
                 <div class="modal-footer">

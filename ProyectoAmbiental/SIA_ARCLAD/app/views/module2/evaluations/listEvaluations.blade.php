@@ -11,16 +11,44 @@ and open the template in the editor.
 @stop
 
 @section('content')
-    @if (Session::has('message'))
-    {{Session::get('message')}}
-    @endif
-    <h1>Lista de Evaluaciones en la empresa</h1>
-        <p>Evaluaciones a cada una de las leyes ambientales para la empresa:</p>
-
-        {{HTML::ul($evaluations)}}
+@if (Session::has('message'))
+<div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                {{Session::get('message')}}
+            </div>
+@endif
+    <h1>Evaluaciones de los Requisitos</h1>
+        <p>Evaluacion de cada una de las leyes aplicables o no para la empresa:</p>
+        
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Aplicacion</th>
+                <th>Aplicacion Especifica</th>
+                <th>Cumplimiento</th>
+                <th>Fecha Limite</th>
+                <th>Informacion de Cumplimiento</th>
+                <th>Acci&oacute;n</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($evaluations as $evaluation)
+            <tr>
+                <td>{{$evaluation->application}}</td>
+                <td>{{$evaluation->specific_application}}</td>
+                <td>{{$evaluation->compliance}}</td>
+                <td>{{$evaluation->deadline}}</td>
+                <td>{{$evaluation->information_compliance}}</td>
+                <td>
+                    <a href="{{URL::to('evaluations/'.$evaluation->id)}}" type="button" class="btn btn-info" ><span class="glyphicon glyphicon-info-sign"></span> info</a>
+                </td>
+            </tr>
+            @endforeach
+            </tbody>
+        </table> 
 @stop
 
-@section('Toggle_nav')
-    <a href="#" class="list-group-item active">Listar Evaluaciones</a>
-    <a href="#" class="list-group-item">Nueva Evaluacion</a>
+@section('menulateral')
+@include('includes.evaluationsidebar')
 @stop
+

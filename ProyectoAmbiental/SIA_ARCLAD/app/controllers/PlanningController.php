@@ -33,7 +33,18 @@ class PlanningController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+            $plannings = new Planning();
+            $plannings->required_activities=Input::get('required_activities');
+            $plannings->responsible=Input::get('responsible');
+            $plannings->term=Input::get('term');
+            $plannings->resources=Input::get('resources');
+            $plannings->monitoring=Input::get('monitoring');
+            $plannings->plan_status=Input::get('plan_status');
+           
+            $plannings->save();
+            
+            Session::flash('message','Planeacion creada con Exito');
+            return Redirect::to('plannings');
 	}
 
 
@@ -58,7 +69,8 @@ class PlanningController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+            $planning = Planning::find($id);
+            return View::make('module2.plannings.edit')->with('planning',$planning);
 	}
 
 
@@ -70,7 +82,18 @@ class PlanningController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+            $plannings = Planning::find($id);
+            $plannings->required_activities=Input::get('required_activities');
+            $plannings->responsible=Input::get('responsible');
+            $plannings->term=Input::get('term');
+            $plannings->resources=Input::get('resources');
+            $plannings->monitoring=Input::get('monitoring');
+            $plannings->plan_status=Input::get('plan_status');
+     
+            $plannings->save();
+            
+            Session::flash('message','Planeacion Actualizada con Exito');
+            return Redirect::to('plannings/'.$id);
 	}
 
 
