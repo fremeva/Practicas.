@@ -18,4 +18,9 @@ class Requisite extends Eloquent{
     {
         return $this->belongsTo('Aspect');
     }
+    
+    public function evaluation()
+    {
+        return $this->hasOne('Evaluation','requisite_id');
+    }
 }

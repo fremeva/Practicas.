@@ -13,4 +13,8 @@
  */
 class Planning extends Eloquent{
     //put your code here
+    public function  evaluation()
+    {
+        return $this->belongsTo('Evaluation');
+    }
 }

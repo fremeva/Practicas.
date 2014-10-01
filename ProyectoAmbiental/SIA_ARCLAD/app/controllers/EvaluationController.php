@@ -22,9 +22,15 @@ class EvaluationController extends \BaseController {
 	 */
 	public function create()
 	{
+            
             return View::make('module2.evaluations.create');
 	}
-
+        
+        public function createEv($id)
+	{
+            
+            return View::make('module2.evaluations.create')->with('id',$id);
+	}
 
 	/**
 	 * Store a newly created resource in storage.
@@ -40,6 +46,7 @@ class EvaluationController extends \BaseController {
             $evaluation->compliance=Input::get('compliance');
             $evaluation->deadline=Input::get('deadline');
             $evaluation->information_compliance=Input::get('information_compliance');
+            $evaluation->requisite_id=Input::get('requisite_id');
            
             $evaluation->save();
             

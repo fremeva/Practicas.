@@ -15,6 +15,7 @@ Show Requisite
     <!-- Default panel contents -->
     <div class="panel-heading">Detalles de {{$requisite->norm}} {{$requisite->norm_number}}</div>
     <div class="panel-body">
+        <!-- Si existe un Mensaje de Session -->
         @if(Session::has('message'))
         <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -25,6 +26,7 @@ Show Requisite
     </div>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+            <!--Tabla de Detalles-->
             <table class="table">
                 <tr>
                     <th>Año</th>
@@ -65,11 +67,19 @@ Show Requisite
             </table><!-- Table -->
             
             <a class="btn btn-info" href="{{URL::to('requisites/'.$requisite->id.'/edit')}}"><span class="glyphicon glyphicon-edit"></span> Editar</a>
-            <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
+            @if(is_null($requisite->evaluation))
+                <a class="btn btn-info" href="{{URL::to('evaluations/create/'.$requisite->id)}}"><span class="glyphicon glyphicon-edit"></span>Crear Evaluacion</a>
+            @else
+                <a class="btn btn-info" href="{{URL::to('evaluations/'.$requisite->evaluation->id)}}"><span class="glyphicon glyphicon-edit"></span> Ver Evaluacion</a>
+                @if(is_null($requisite->evaluation->planning))
+                    <a class="btn btn-info" href="{{URL::to('plannings/create/'.$requisite->evaluation->id)}}"><span class="glyphicon glyphicon-edit"></span>Crear planeacion</a>
+                @else
+                    <a class="btn btn-info" href="{{URL::to('plannings/'.$requisite->evaluation->planning->id)}}"><span class="glyphicon glyphicon-edit"></span>Ver Planeacion</a>
+                @endif
+            @endif
+            <a type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</a>
         </div>
     </div>
-    
-
 </div>
 
 <!-- Modal Javascript Boostrap -->
@@ -85,7 +95,7 @@ Show Requisite
                 </div>
                 <div class="modal-body">
                     <p>
-                        Esta seguro de Eliminar Requisito Legal Seleccionado
+                        Esta seguro de Eliminar Requisito Legal Seleccionado.
                     </p>
                 </div>
                 <div class="modal-footer">

@@ -24,8 +24,13 @@ class PlanningController extends \BaseController {
 	{
             return View::make('module2.plannings.create');
 	}
-
-
+        
+        public function createPlan($id)
+	{
+            
+            return View::make('module2.plannings.create')->with('id',$id);
+	}
+        
 	/**
 	 * Store a newly created resource in storage.
 	 *
@@ -40,11 +45,14 @@ class PlanningController extends \BaseController {
             $plannings->resources=Input::get('resources');
             $plannings->monitoring=Input::get('monitoring');
             $plannings->plan_status=Input::get('plan_status');
-           
+            $plannings->evaluation_id=Input::get('evaluation_id');
+            $evaluation = Evaluation::find(Input::get('evaluation_id'));
             $plannings->save();
             
+           
+            
             Session::flash('message','Planeacion creada con Exito');
-            return Redirect::to('plannings');
+            return Redirect::to('requisites/'.$evaluation->requisite_id);
 	}
 
 
@@ -106,10 +114,12 @@ class PlanningController extends \BaseController {
 	public function destroy($id)
 	{
             $planning = Planning::find($id);
+            $evaluation = Evaluation::find($planning->evaluation_id);
+            
             $planning->delete();
             
             Session::flash('message','La Eliminacion ha sido un Exito');
-            return Redirect::to('plannings');
+            return Redirect::to('requisites/'.$evaluation->requisite_id);
 	}
 
 

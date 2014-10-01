@@ -23,3 +23,6 @@ Route::resource('requisites','RequisiteController');
 Route::resource('evaluations','EvaluationController');
 
 Route::resource('plannings','PlanningController');
+
+Route::get('evaluations/create/{id}','EvaluationController@createEv');
+Route::get('plannings/create/{id}','PlanningController@createPlan');

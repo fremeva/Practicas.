@@ -17,6 +17,7 @@ class RequisiteTableSeeder extends Seeder{
         DB::table('requisites')->delete();
         
         Requisite::create(array(
+           'id' => 1,
            'year' => '1974',
            'month' => 'Diciembre',
            'norm' => 'Decreto/ley',

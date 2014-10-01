@@ -49,7 +49,10 @@ Crear Planeacion.
             array('Ejecutada'=>'Ejecutada','Continua'=>'Continua','En Ejecucion'=>'En Ejecucion','Pendiente'=>'Pendiente'),
             Input::old('norm'),
             array('class'=>'form-control'))}}
-        </div>        
+        </div>
+        
+        {{ Form::hidden('evaluation_id', $id) }}
+
         {{Form::submit('Guardar',array('class'=>'btn btn-default'))}}
             <br /><br />
             {{ Form::close() }}

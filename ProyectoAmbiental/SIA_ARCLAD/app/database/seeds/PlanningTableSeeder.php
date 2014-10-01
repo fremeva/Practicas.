@@ -17,12 +17,14 @@ class PlanningTableSeeder extends Seeder{
         DB::table('plannings')->delete();
         
         Planning::create(array(
+           'id' => 1,
            'required_activities' => 'Verificaciones de calibración y mediciones continuas del caudal captado.',
            'responsible' => 'Ingeniería y Mantenimiento',
            'term' => 'No Aplica',
            'resources' => 'Operador de Planta',
            'monitoring' => 'Registro diario de captación.',
-           'plan_status' => 'Ejecutada'
+           'plan_status' => 'Ejecutada',
+           'evaluation_id' => 1  
         ));
     }
 }

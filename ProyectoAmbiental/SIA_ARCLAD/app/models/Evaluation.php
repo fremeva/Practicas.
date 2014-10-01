@@ -13,4 +13,14 @@
  */
 class Evaluation extends Eloquent{
     //put your code here
+    
+    public function requisite()
+    {
+        return $this->belongsTo('Requisite');
+    }
+    
+    public function planning()
+    {
+        return $this->hasOne('Planning','evaluation_id');
+    }
 }

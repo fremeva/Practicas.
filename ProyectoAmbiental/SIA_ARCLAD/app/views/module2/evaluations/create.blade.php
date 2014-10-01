@@ -18,7 +18,7 @@ Crear Evaluacion.
 </div>
 @endif
 
-<h2>Crear Evaluacion</h2>
+<h2>Crear Evaluacion del requisito</h2>
 
 {{ Form::open(array('url' => 'evaluations','role'=>'form')) }}
         <div class="form-group">
@@ -62,6 +62,7 @@ Crear Evaluacion.
             {{Form::label('deadline', 'Fecha Limite')}}
             {{Form::text('deadline',Input::old('deadline'),array('placeholder'=>'Fecha Limite','class' => 'form-control'))}}
         </div>
+        {{ Form::hidden('requisite_id', $id) }}
         
         {{Form::submit('Guardar',array('class'=>'btn btn-default'))}}
             <br /><br />

@@ -21,6 +21,14 @@ class CreatePlanningsTable extends Migration {
                         $table->longText('resources')->nullable();
                         $table->longText('monitoring')->nullable();
                         $table->string('plan_status');
+                        
+                        $table->integer('evaluation_id')
+                                ->unsigned();
+                        
+                        $table->foreign('evaluation_id')
+                                ->references('id')->on('evaluations')
+                                ->onDelete('cascade');
+                        
 			$table->timestamps();
 		});
 	}

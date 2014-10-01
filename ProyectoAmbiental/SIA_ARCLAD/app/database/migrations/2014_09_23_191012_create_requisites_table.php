@@ -14,7 +14,7 @@ class CreateRequisitesTable extends Migration {
 	{
 		Schema::create('requisites', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->increments('id')->unsigned();
                         $table->string('year');
                         $table->string('month');
                         $table->string('norm');

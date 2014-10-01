@@ -20,6 +20,14 @@ class CreateEvaluationsTable extends Migration {
                         $table->string('compliance');
                         $table->string('deadline')->nullable();
                         $table->longText('information_compliance')->nullable();
+                        
+                        $table->integer('requisite_id')
+                                ->unsigned();
+                        
+                        $table->foreign('requisite_id')
+                                ->references('id')->on('requisites')
+                                ->onDelete('cascade');
+                        
 			$table->timestamps();
 		});
 	}

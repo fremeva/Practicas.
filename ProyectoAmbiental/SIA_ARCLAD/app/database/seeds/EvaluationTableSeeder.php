@@ -17,11 +17,13 @@ class EvaluationTableSeeder extends Seeder{
         DB::table('evaluations')->delete();
         
         Evaluation::create(array(
+           'id' => 1,
            'application' => 'Autoridades Ambientales',
            'specific_application' => 'Cobro de tasas retributivas por uso de agua.',
            'compliance' => 'Si',
            'deadline' => 'No Aplica',
-           'information_compliance' => 'Es la base para que las Autoridades Ambientales hagan el cobro de las tasas por uso.'
+           'information_compliance' => 'Es la base para que las Autoridades Ambientales hagan el cobro de las tasas por uso.',
+           'requisite_id' => 1 
         ));
     }
 }
