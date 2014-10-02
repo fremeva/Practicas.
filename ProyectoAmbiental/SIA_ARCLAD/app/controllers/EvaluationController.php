@@ -47,11 +47,12 @@ class EvaluationController extends \BaseController {
             $evaluation->deadline=Input::get('deadline');
             $evaluation->information_compliance=Input::get('information_compliance');
             $evaluation->requisite_id=Input::get('requisite_id');
+            $requisite_id=Input::get('requisite_id');
            
             $evaluation->save();
             
             Session::flash('message','Evaluacion creada con Exito');
-            return Redirect::to('evaluations');;
+            return Redirect::to('requisites/'.$requisite_id);;
             
 	}
 
@@ -96,7 +97,7 @@ class EvaluationController extends \BaseController {
             $evaluation->compliance=Input::get('compliance');
             $evaluation->deadline=Input::get('deadline');
             $evaluation->information_compliance=Input::get('information_compliance');
-           
+            
             $evaluation->save();
             
             Session::flash('message','Evaluacion creada con Exito');
@@ -113,9 +114,11 @@ class EvaluationController extends \BaseController {
 	public function destroy($id)
 	{
             $evaluation = Evaluation::find($id);
+            $requisite_id=$evaluation->requisite_id;
             $evaluation->delete();
+            
             Session::flash('message','Evaluacion Eliminada con Exito');
-            return Redirect::to('evaluations');
+            return Redirect::to('equisites/'.$requisite_id);
 	}
 
 

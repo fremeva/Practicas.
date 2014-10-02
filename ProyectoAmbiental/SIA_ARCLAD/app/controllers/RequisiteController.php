@@ -114,6 +114,8 @@ class RequisiteController extends \BaseController {
 	public function destroy($id)
 	{
             $requisite = Requisite::find($id);
+            //$requisite->evaluation()->planning()-delete();
+            //$requisite->evaluation()->delete();
             $requisite->delete();
             
             Session::flash('message','La Eliminacion ha sido un Exito');

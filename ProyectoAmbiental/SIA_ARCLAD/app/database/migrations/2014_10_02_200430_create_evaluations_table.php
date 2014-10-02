@@ -14,8 +14,8 @@ class CreateEvaluationsTable extends Migration {
 	{
 		Schema::create('evaluations', function(Blueprint $table)
 		{
-			$table->increments('id');
-                        $table->string('application');
+			$table->increments('id')->unsigned();
+			$table->string('application');
                         $table->longText('specific_application');
                         $table->string('compliance');
                         $table->string('deadline')->nullable();
@@ -27,7 +27,6 @@ class CreateEvaluationsTable extends Migration {
                         $table->foreign('requisite_id')
                                 ->references('id')->on('requisites')
                                 ->onDelete('cascade');
-                        
 			$table->timestamps();
 		});
 	}

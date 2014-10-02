@@ -14,8 +14,8 @@ class CreatePlanningsTable extends Migration {
 	{
 		Schema::create('plannings', function(Blueprint $table)
 		{
-			$table->increments('id');
-                        $table->longText('required_activities');
+			$table->increments('id')->unsigned();
+			$table->longText('required_activities');
                         $table->string('responsible');
                         $table->string('term');
                         $table->longText('resources')->nullable();
@@ -28,7 +28,6 @@ class CreatePlanningsTable extends Migration {
                         $table->foreign('evaluation_id')
                                 ->references('id')->on('evaluations')
                                 ->onDelete('cascade');
-                        
 			$table->timestamps();
 		});
 	}

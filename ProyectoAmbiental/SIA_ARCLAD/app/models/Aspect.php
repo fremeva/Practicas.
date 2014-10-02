@@ -17,4 +17,5 @@ class Aspect extends Eloquent{
     {
         return $this->hasMany('Requisite','aspect_id');
     }
+    
 }

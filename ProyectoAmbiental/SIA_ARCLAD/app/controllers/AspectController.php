@@ -46,8 +46,9 @@ class AspectController extends \BaseController {
 	public function destroy($id)
 	{
             $aspect = Aspect::find($id);
+            //$aspect->requisites()->delete();
             $aspect->delete();
-            $aspect->requisites()->delete();
+            
             
             Session::flash('message','Aspecto ha sido Eliminado Correctamente');
             return Redirect::to('aspects');
