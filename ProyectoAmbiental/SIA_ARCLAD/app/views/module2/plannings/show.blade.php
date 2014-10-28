@@ -88,7 +88,3 @@ Show Planning
         </div>
     </div>
 @stop
-
-@section('menulateral')
-@include('includes.planningsidebar')
-@stop

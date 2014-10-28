@@ -85,7 +85,3 @@ Show Evaluations
         </div>
     </div>
 @stop
-
-@section('menulateral')
-@include('includes.evaluationsidebar')
-@stop

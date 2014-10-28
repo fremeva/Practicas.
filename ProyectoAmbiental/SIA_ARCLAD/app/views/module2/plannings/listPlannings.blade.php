@@ -48,9 +48,3 @@ and open the template in the editor.
             </tbody>
         </table>        
 @stop
-
-
-@section('menulateral')
-@include('includes.planningsidebar')
-@stop
-

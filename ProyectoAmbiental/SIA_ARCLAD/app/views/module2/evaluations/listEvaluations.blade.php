@@ -48,7 +48,4 @@ and open the template in the editor.
         </table> 
 @stop
 
-@section('menulateral')
-@include('includes.evaluationsidebar')
-@stop
 

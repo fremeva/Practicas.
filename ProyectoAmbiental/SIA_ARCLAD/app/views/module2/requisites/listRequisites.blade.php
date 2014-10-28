@@ -45,7 +45,3 @@ Requisitos
         </table>        
 @stop
 
-
-@section('menulateral')
-@include('includes.requisitesidebar')
-@stop
