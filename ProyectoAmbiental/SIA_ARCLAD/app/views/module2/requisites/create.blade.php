@@ -66,7 +66,7 @@ Crear Requisito.
 <div class="form-group">
     {{Form::label('aspect_id', 'Aspecto Asociado:')}}
     
-    <select class="form-control" name="aspect_id" value="{{e(Input::old('aspect_id'))}}">
+    <select class="form-control" name="aspect_id" value="{{(Input::old('aspect_id'))}}">
         @foreach($aspects as $aspect)
         <option value='{{$aspect->id}}'>{{$aspect->name}}</option>
        @endforeach
