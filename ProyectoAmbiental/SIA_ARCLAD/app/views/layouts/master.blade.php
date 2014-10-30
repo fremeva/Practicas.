@@ -26,16 +26,12 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Objetivos Estrategicos</a></li>
                                 <li><a href="#">Estrategias</a></li>
-
                                 <li class="divider"></li>
                                 <li class="dropdown-header">Resgistros </li>
                                 <li><a href="#">Indetificación y evalución legal </a></li>
                                 <li><a href="#">Riesgo Ambiental </a></li>
                             </ul>
-
                         </li>
-
-
                         <li class="dropdown">
                             <a  href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-database fa-lg"></i> Entrada Recursos  <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -43,7 +39,7 @@
                                 <li class="divider"></li>
                                 <li class="dropdown-header">Agua</li>
 
-                                <li><a href="#">Descripción del proceso </a></li>
+                                <li><a href="#">Descripción del proceso</a></li>
                                 <li><a href="#">Equipos e Inventario de consumo</a></li>
                                 <li><a href="#">otros</a></li>
                                 <li class="divider"></li>
