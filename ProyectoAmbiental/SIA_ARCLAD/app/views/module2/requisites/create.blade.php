@@ -11,6 +11,12 @@ Crear Requisito.
 @stop
 
 @section('content')
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
+  <li role="presentation" class="active"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
+  <li role="presentation"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+</ul>
+<br /><br />
 @if (Session::has('message'))
 <div class="alert alert-success">
     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -23,11 +29,27 @@ Crear Requisito.
 {{ Form::open(array('url' => 'requisites','role'=>'form')) }}
 <div class="form-group">
     {{Form::label('year', 'Año:')}}
-    {{Form::text('year',Input::old('year'),array('placeholder'=>'19..','class' => 'form-control'))}}
+    {{Form::selectYear('year',1900, 2020,Input::old('year'),array('class' => 'form-control'))}}
+    
 </div>
 <div class="form-group">
     {{Form::label('month', 'Mes:')}}
-    {{Form::text('month',Input::old('month'),array('placeholder'=>'Enero/Febrero/...','class' => 'form-control'))}}
+    {{Form::select('month',
+            array('Enero'=>'Enero',
+                  'Febrero'=>'Febrero',
+                  'Marzo'=>'Marzo',
+                  'Abril'=>'Abril',
+                  'Mayo'=>'Mayo',
+                  'Junio'=>'Junio',
+                  'Julio'=>'Julio',
+                  'Agosto'=>'Agosto',
+                  'Septiembre'=>'Septiembre',
+                  'Octubre'=>'Octubre',
+                  'Noviembre'=>'Noviembre',
+                  'Diciembre'=>'Diciembre',
+                  ),
+            Input::old('month'),
+            array('class'=>'form-control'))}}
 </div>
 <div class="form-group">
     {{Form::label('norm', 'Norma:')}}
@@ -74,6 +96,7 @@ Crear Requisito.
 </div>
 
 {{Form::submit('Guardar',array('class'=>'btn btn-default'))}}
+{{ Form::reset('Reset',array('class'=>'btn btn-default')) }}
 <br /><br />
 {{ Form::close() }}
 

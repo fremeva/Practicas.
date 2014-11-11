@@ -11,6 +11,14 @@ Show Planning
 @stop
 
 @section('content')
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
+  <li role="presentation" class="active"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
+  <li role="presentation"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+</ul>
+<br /><br />
+
 <div class="panel panel-info">
     <!-- Default panel contents -->
     <div class="panel-heading">Detalles de Planeacion</div>

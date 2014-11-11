@@ -11,18 +11,29 @@
 |
 */
 
-Route::get('/', function()
+Route::get('login', array('uses' => 'HomeController@showLogin'));
+Route::post('login', array('uses' => 'HomeController@doLogin'));
+Route::get('logout', array('uses' => 'HomeController@doLogout'));
+
+Route::group(array('before' => 'auth'), function()
 {
-	return View::make('layouts.master');
+    Route::get('/', function(){ return View::make('index'); });
+    
+    Route::resource('aspects','AspectController');
+
+    Route::resource('requisites','RequisiteController');
+
+    Route::resource('evaluations','EvaluationController');
+
+    Route::resource('plannings','PlanningController');
+
+    Route::resource('user','UserController');
+
+    Route::get('evaluations/create/{id}','EvaluationController@createEv');
+    Route::get('plannings/create/{id}','PlanningController@createPlan');
+    Route::get('resumentable','ResumenController@index');
+
 });
 
-Route::resource('aspects','AspectController');
 
-Route::resource('requisites','RequisiteController');
 
-Route::resource('evaluations','EvaluationController');
-
-Route::resource('plannings','PlanningController');
-
-Route::get('evaluations/create/{id}','EvaluationController@createEv');
-Route::get('plannings/create/{id}','PlanningController@createPlan');

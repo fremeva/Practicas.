@@ -9,9 +9,11 @@ class PlanningController extends \BaseController {
 	 */
 	public function index()
 	{
-            //
+            /*/*
             $plannings = Planning::all();
-            return View::make('module2.plannings.listPlannings')->with('plannings',$plannings);
+            return View::make('module2.plannings.listPlannings')->with('plannings',$plannings);*/
+            
+            return Redirect::to('requisites');  //Esto es Temporal
 	}
 
 

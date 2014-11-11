@@ -11,6 +11,12 @@ Crear Planeacion.
 @stop
 
 @section('content')
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
+  <li role="presentation" class="active"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
+  <li role="presentation"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+</ul>
+<br /><br />
 @if (Session::has('message'))
 <div class="alert alert-success">
     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -54,6 +60,7 @@ Crear Planeacion.
         {{ Form::hidden('evaluation_id', $id) }}
 
         {{Form::submit('Guardar',array('class'=>'btn btn-default'))}}
+        {{ Form::reset('Reset',array('class'=>'btn btn-default')) }}
             <br /><br />
             {{ Form::close() }}
 

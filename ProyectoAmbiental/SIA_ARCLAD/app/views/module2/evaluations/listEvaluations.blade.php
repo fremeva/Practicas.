@@ -11,6 +11,7 @@ and open the template in the editor.
 @stop
 
 @section('content')
+
 @if (Session::has('message'))
 <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

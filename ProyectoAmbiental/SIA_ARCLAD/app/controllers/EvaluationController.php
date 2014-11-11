@@ -9,9 +9,12 @@ class EvaluationController extends \BaseController {
 	 */
 	public function index()
 	{
-            //
+            /*/*
             $evaluations = Evaluation::all();
-            return View::make('module2.evaluations.listEvaluations')->with('evaluations',$evaluations);
+            return View::make('module2.evaluations.listEvaluations')->with('evaluations',$evaluations);*/
+         
+            return Redirect::to('requisites');  //Esto es Temporal
+            
 	}
 
 
@@ -118,7 +121,7 @@ class EvaluationController extends \BaseController {
             $evaluation->delete();
             
             Session::flash('message','Evaluacion Eliminada con Exito');
-            return Redirect::to('equisites/'.$requisite_id);
+            return Redirect::to('requisites/'.$requisite_id);
 	}
 
 
