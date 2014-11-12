@@ -35,5 +35,90 @@ class AspectTableSeeder extends Seeder{
             'id' => 4,
            'name' => 'Consumo de Energía'
         ));
+        Aspect::create(array(
+            'id' => 5,
+           'name' => 'Gases Efecto Invernadero'
+        ));
+        
+        Aspect::create(array(
+            'id' => 6,
+           'name' => 'Captación de Agua'
+        ));
+        
+        Aspect::create(array(
+            'id' => 7,
+           'name' => 'Vertimiento de Agua Residual Doméstica a Cuerpos de Agua'
+        ));
+        
+        Aspect::create(array(
+            'id' => 8,
+           'name' => 'Vertimiento de Agua Residual Doméstica a Suelo'
+        ));
+        
+        Aspect::create(array(
+            'id' => 9,
+           'name' => 'Aceites Usados'
+        ));
+        
+        Aspect::create(array(
+            'id' => 10,
+           'name' => 'Residuos Electrónicos'
+        ));
+        
+        Aspect::create(array(
+            'id' => 11,
+           'name' => 'Disposición de Residuos Sólidos'
+        ));
+        
+        Aspect::create(array(
+            'id' => 12,
+           'name' => 'Disposición de Residuos Peligrosos'
+        ));
+        
+        Aspect::create(array(
+            'id' => 13,
+           'name' => 'Disposición de Residuos Especiales'
+        ));
+        
+        Aspect::create(array(
+            'id' => 14,
+           'name' => 'Uso Eficiente y Racional de Agua'
+        ));
+        
+        Aspect::create(array(
+            'id' => 15,
+           'name' => 'Planes PosConsumo'
+        ));
+        
+        Aspect::create(array(
+            'id' => 16,
+           'name' => 'Ruido Ambiental'
+        ));
+        
+        Aspect::create(array(
+            'id' => 17,
+           'name' => 'Manejo de Sustancias Químicas'
+        ));
+        
+        Aspect::create(array(
+            'id' => 18,
+           'name' => 'Planes de Emergencia y Contingencia'
+        ));
+        Aspect::create(array(
+            'id' => 19,
+           'name' => 'Educación Ambiental'
+        ));
+        
+        Aspect::create(array(
+            'id' => 20,
+           'name' => 'Obligaciones como Usuarios de Servicio Público de Aseo'
+        ));
+        
+       
+        
+        
+        
+        
+        
     }
 }

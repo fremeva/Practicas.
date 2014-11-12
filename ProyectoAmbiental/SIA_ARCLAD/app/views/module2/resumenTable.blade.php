@@ -15,6 +15,7 @@ Resumen Table
   <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
   <li role="presentation"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
   <li role="presentation" class="active"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+  <li role="presentation" class="pull-right"><a href="{{URL::to('requisites/create')}}">Nuevo Requisito</a></li>
 </ul>
 @if (Session::has('message'))
 <div class="alert alert-success">
@@ -22,6 +23,33 @@ Resumen Table
                 {{Session::get('message')}}
             </div>
 @endif
+
+
+<div id="carousel-example-generic" class="carousel slide center-block" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      {{ HTML::image('image/construccion.jpg', 'en Construccion') }}
+      <div class="carousel-caption">
+    
+      </div>
+    </div>
+    <div class="item">
+      {{ HTML::image('image/construccion.jpg', 'en Construccion') }}
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+  
+</div>
+</div> 
+<!--
 <h1>Resumen</h1>
 <p>A continuacion se muestra el resumen de acuerdo a los aspectos asociados que cumplen o no cumplen en la empresa:</p>
 <table class="table table-bordered text-center">
@@ -56,5 +84,5 @@ Resumen Table
         </tr>
         @endforeach
     </thead>
-</table>
+</table>-->
 @stop

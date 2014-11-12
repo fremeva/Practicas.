@@ -9,7 +9,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return Illuminate\Support\Facades\Redirect::to('/');
 	}
 
 

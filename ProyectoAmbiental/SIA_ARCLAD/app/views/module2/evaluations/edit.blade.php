@@ -15,6 +15,7 @@ Editar Planeacion.
   <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
   <li role="presentation" class="active"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
   <li role="presentation"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+  <li role="presentation" class="pull-right"><a href="{{URL::to('requisites/create')}}">Nuevo Requisito</a></li>
 </ul>
 <br /><br />
 
@@ -36,12 +37,12 @@ Editar Planeacion.
                   'Proveedores'=>'Proveedores'
                  ),
             null,
-            array('class'=>'form-control'))}}
+            array('class'=>'form-control','required'=>'required'))}}
         </div>
 
         <div class="form-group">
             {{Form::label('specific_application', 'Aplicacion Especifica')}}
-            {{Form::textarea('specific_application',null, ['class' => 'form-control','size' => '20x10'])}}
+            {{Form::textarea('specific_application',null, ['class' => 'form-control','size' => '20x10','required'=>'required'])}}
         </div>
         <div class="form-group">
             {{Form::label('compliance', 'Cumplimiento:')}}
@@ -54,7 +55,7 @@ Editar Planeacion.
                   'Parcialmente'=>'Parcialmente'
                  ),
             null,
-            array('class'=>'form-control'))}}
+            array('class'=>'form-control','required'=>'required'))}}
         </div>
         <div class="form-group">
             {{Form::label('information_compliance', 'Informacion de Cumplimiento')}}
@@ -66,7 +67,8 @@ Editar Planeacion.
             {{Form::text('deadline',null,array('placeholder'=>'Fecha Limite','class' => 'form-control'))}}
         </div>
         
-        {{Form::submit('Guardar',array('class'=>'btn btn-default'))}}
+        {{Form::submit('Guardar',array('class'=>'btn btn-success'))}}
+        {{ Form::reset('Reset',array('class'=>'btn btn-default')) }}
             <br /><br />
             {{ Form::close() }}
    

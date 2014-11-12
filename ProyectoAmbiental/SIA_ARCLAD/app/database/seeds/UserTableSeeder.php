@@ -16,16 +16,16 @@ class UserTableSeeder extends Seeder{
     public function run(){
     DB::table('users')->delete();
     user::create(array(
-            'name'          =>'jairo martinesz',
-            'username'      =>'jairito07',
+            'name'          =>'Jairo Manuel Martinez Giraldo',
+            'username'      =>'jairo.martinez',
             'email'         => 'jairo.martinez@arclad.com',
             'password'      => Hash::make('centrino89'),
             
             ));
     
      user::create(array(
-            'name'          =>'Fredy Mendoza',
-            'username'      =>'fredy',
+            'name'          =>'Fredy Mendoza Vargas',
+            'username'      =>'fredy.mendoza',
             'email'         => 'fredy.mendoza@arclad.com',
             'password'      => Hash::make('centrino89'),
             
@@ -35,7 +35,7 @@ class UserTableSeeder extends Seeder{
             'name'          =>'Diego Velez Carrion',
             'username'      =>'diego.velez',
             'email'         => 'diego.velez@arclad.com',
-            'password'      => Hash::make('D13g0V3l3z'),
+            'password'      => Hash::make('D13g0V'),
             
             ));
     }

@@ -15,6 +15,7 @@ Crear Evaluacion.
   <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
   <li role="presentation" class="active"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
   <li role="presentation"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+  <li role="presentation" class="pull-right"><a href="{{URL::to('requisites/create')}}">Nuevo Requisito</a></li>
 </ul>
 <br /><br />
 @if (Session::has('message'))
@@ -39,12 +40,12 @@ Crear Evaluacion.
                   'Proveedores'=>'Proveedores'
                  ),
             Input::old('application'),
-            array('class'=>'form-control'))}}
+            array('class'=>'form-control', 'required'=>'required'))}}
         </div>
 
         <div class="form-group">
             {{Form::label('specific_application', 'Aplicacion Especifica')}}
-            {{Form::textarea('specific_application',Input::old('specific_application'), ['class' => 'form-control','size' => '20x10'])}}
+            {{Form::textarea('specific_application',Input::old('specific_application'), ['class' => 'form-control','size' => '20x10','required'=>'required'])}}
         </div>
         <div class="form-group">
             {{Form::label('compliance', 'Cumplimiento:')}}
@@ -57,7 +58,7 @@ Crear Evaluacion.
                   'Parcialmente'=>'Parcialmente'
                  ),
             Input::old('compliance'),
-            array('class'=>'form-control'))}}
+            array('class'=>'form-control','required'=>'required'))}}
         </div>
         <div class="form-group">
             {{Form::label('information_compliance', 'Informacion de Cumplimiento')}}
@@ -70,7 +71,7 @@ Crear Evaluacion.
         </div>
         {{ Form::hidden('requisite_id', $id) }}
         
-        {{Form::submit('Guardar',array('class'=>'btn btn-default'))}}
+        {{Form::submit('Guardar',array('class'=>'btn btn-success'))}}
         {{ Form::reset('Reset',array('class'=>'btn btn-default')) }}
             <br /><br />
             

@@ -15,6 +15,8 @@ Requisitos
   <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
   <li role="presentation" class="active"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
   <li role="presentation"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+  <li role="presentation" class="pull-right"><a href="{{URL::to('requisites/create')}}">Nuevo Requisito</a></li>
+  
 </ul>
 @if (Session::has('message'))
 <div class="alert alert-success">
@@ -23,7 +25,7 @@ Requisitos
             </div>
 @endif
 <h1>Requisitos Legales</h1>
-<p>Los Requisitos legales del medio ambiente para la empresa: <span class="pull-right"><a href="{{URL::to('requisites/create')}}" class="btn btn-default">Nuevo Requisito</a></span></p><br /><br />
+<p>Los Requisitos legales del medio ambiente para la empresa:
         <table class="table">
             <thead>
             <tr>

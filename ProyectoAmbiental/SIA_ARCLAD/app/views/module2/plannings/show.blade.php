@@ -16,6 +16,7 @@ Show Planning
   <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
   <li role="presentation" class="active"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
   <li role="presentation"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+  <li role="presentation" class="pull-right"><a href="{{URL::to('requisites/create')}}">Nuevo Requisito</a></li>
 </ul>
 <br /><br />
 
