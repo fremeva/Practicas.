@@ -59,6 +59,12 @@ Show Evaluations
             </table><!-- Table -->
             
             <a class="btn btn-info" href="{{URL::to('evaluations/'.$evaluation->id.'/edit')}}"><span class="glyphicon glyphicon-edit"></span> Editar</a>
+            <a class="btn btn-info" href="{{URL::to('requisites/'.$evaluation->requisite_id)}}"><span class="glyphicon glyphicon-edit"></span>Volver a Requisito</a>
+            @if(is_null($evaluation->planning))
+                    <a class="btn btn-info" href="{{URL::to('plannings/create/'.$evaluation->id)}}"><span class="glyphicon glyphicon-edit"></span>Crear planeacion</a>
+            @else
+                    <a class="btn btn-info" href="{{URL::to('plannings/'.$evaluation->planning->id)}}"><span class="glyphicon glyphicon-edit"></span>Ver Planeacion</a>
+            @endif
             <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
             
         </div>

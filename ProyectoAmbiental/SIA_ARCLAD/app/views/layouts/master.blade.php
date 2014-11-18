@@ -5,6 +5,9 @@
         {{ HTML::style('css/bootstrap.min.css') }}<!-- Bootstrap core CSS -->
         {{ HTML::style('css/offcanvas.css') }}<!-- Custom styles for this template -->
         {{ HTML::style('css/font-awesome.min.css')}}<!-- Font Awesome core CSS -->
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
         {{HTML::script('js/jquery.min.js')}}
         {{ HTML::script('js/bootstrap.min.js') }}
     </head>
@@ -83,9 +86,7 @@
             </footer>
             @show
         </div><!--/.container-->
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
+        
         
     </body>
 </html>

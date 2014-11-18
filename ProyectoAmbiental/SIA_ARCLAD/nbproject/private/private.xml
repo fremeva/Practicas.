@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/arclad/Documents/GitHub/Practicas/ProyectoAmbiental/SIA_ARCLAD/app/storage/logs/laravel.log</file>
+            <file>file:/C:/Users/arclad/Documents/GitHub/Practicas/ProyectoAmbiental/SIA_ARCLAD/app/controllers/ResumenController.php</file>
+            <file>file:/C:/Users/arclad/Documents/GitHub/Practicas/ProyectoAmbiental/SIA_ARCLAD/app/views/module2/requisites/listRequisites.blade.php</file>
+            <file>file:/C:/Users/arclad/Documents/GitHub/Practicas/ProyectoAmbiental/SIA_ARCLAD/app/models/Aspect.php</file>
+            <file>file:/C:/Users/arclad/Documents/GitHub/Practicas/ProyectoAmbiental/SIA_ARCLAD/app/views/module2/evaluations/create.blade.php</file>
+            <file>file:/C:/Users/arclad/Documents/GitHub/Practicas/ProyectoAmbiental/SIA_ARCLAD/app/models/Requisite.php</file>
+        </group>
     </open-files>
 </project-private>

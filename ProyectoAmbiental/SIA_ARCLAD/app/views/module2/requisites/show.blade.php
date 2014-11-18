@@ -87,7 +87,7 @@ Show Requisite
                     <a class="btn btn-info" href="{{URL::to('plannings/'.$requisite->evaluation->planning->id)}}"><span class="glyphicon glyphicon-edit"></span>Ver Planeacion</a>
                 @endif
             @endif
-            <a type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</a>
+            <a type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</a>
         </div>
     </div>
 </div>

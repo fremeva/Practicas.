@@ -31,9 +31,8 @@ Route::group(array('before' => 'auth'), function()
 
     Route::get('evaluations/create/{id}','EvaluationController@createEv');
     Route::get('plannings/create/{id}','PlanningController@createPlan');
+    
     Route::get('resumentable','ResumenController@index');
-
+    Route::get('resumenxaplicacion','ResumenController@applicationTable');
+    Route::get('resumenxcumplimiento','ResumenController@conplianceTable');
 });
-
-
-
