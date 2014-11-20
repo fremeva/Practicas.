@@ -35,7 +35,7 @@ Resumen Table
 {{HTML::script('js/highcharts/data.js')}}
 {{HTML::script('js/highcharts/exporting.js')}}
 
-<div id="container" style="min-width: 310px; max-width: 800px; height: 750px; margin: 0 auto"></div>
+<div id="container" style="min-width: 310px; max-width: 950px; height: 1550px; margin: 0 auto"></div>
 <br /><br /><br /><br />
 
 <table id="datatable" class="table">
