@@ -26,5 +26,32 @@ class PlanningTableSeeder extends Seeder{
            'plan_status' => 'Ejecutada',
            'evaluation_id' => 1  
         ));
+        
+        Planning::create(array(
+           'id' => 2,
+           'required_activities' => 'Tener en cuenta para la ejecución de nuevas obras de construcción.',
+           'responsible' => 'Ingeniería y Mantenimiento',
+           'term' => 'Continuo',
+           'resources' => 'No Aplica',
+           'monitoring' => 'Requerimiento ejecutado',
+           'plan_status' => 'Ejecutada',
+           'evaluation_id' => 2  
+        ));
+           
+               
+        Planning::create(array(
+           'id' => 3,
+           'required_activities' => 'Mantenimientos preventivos y correctivos.',
+           'responsible' => 'Ingeniería y Mantenimiento',
+           'term' => 'Continuo',
+           'resources' => 'Operador de Planta',
+           'monitoring' => 'Requerimiento ejecutado.',
+           'plan_status' => 'Ejecutada',
+           'evaluation_id' => 4  
+        ));
+        
+        
+        
+               
     }
 }

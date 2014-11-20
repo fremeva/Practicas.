@@ -58,15 +58,15 @@ Show Evaluations
                 
             </table><!-- Table -->
             
-            <a class="btn btn-info" href="{{URL::to('evaluations/'.$evaluation->id.'/edit')}}"><span class="glyphicon glyphicon-edit"></span> Editar</a>
-            <a class="btn btn-info" href="{{URL::to('requisites/'.$evaluation->requisite_id)}}"><span class="glyphicon glyphicon-edit"></span>Volver a Requisito</a>
+            <a class="btn btn-default" href="{{URL::to('evaluations/'.$evaluation->id.'/edit')}}"><i class="fa fa-pencil"></i> Editar</a>
+            <a class="btn btn-default" href="{{URL::to('requisites/'.$evaluation->requisite_id)}}"><i class="fa fa-tag"></i> Ver Requisito</a>
             @if(is_null($evaluation->planning))
-                    <a class="btn btn-info" href="{{URL::to('plannings/create/'.$evaluation->id)}}"><span class="glyphicon glyphicon-edit"></span>Crear planeacion</a>
+                    <a class="btn btn-default" href="{{URL::to('plannings/create/'.$evaluation->id)}}"><i class="fa fa-send"></i> Crear planeacion</a>
             @else
-                    <a class="btn btn-info" href="{{URL::to('plannings/'.$evaluation->planning->id)}}"><span class="glyphicon glyphicon-edit"></span>Ver Planeacion</a>
+                    <a class="btn btn-default" href="{{URL::to('plannings/'.$evaluation->planning->id)}}"><i class="fa fa-send"></i> Ver Planeacion</a>
             @endif
             <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
-            
+            <br /><br />
         </div>
     </div>
     
@@ -86,8 +86,9 @@ Show Evaluations
                 </div>
                 <div class="modal-body">
                     <p>
-                        Esta seguro de Eliminar la Evaluacion.
+                        Esta seguro de Eliminar la Evaluacion <strong><span class="text-warning"> CUIDADO QUE SE BORRARAN LAS PLANEACI&Oacute;N RELACIONADO</span></strong>.
                     </p>
+                   
                 </div>
                 <div class="modal-footer">
                     {{Form::open(array('url' => 'evaluations/'.$evaluation->id,'class'=>'form-inline')) }}

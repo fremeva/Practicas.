@@ -25,7 +25,7 @@ Editar Requisito.
         {{ Form::model($requisite,array('route' => array('requisites.update',$requisite->id),'role'=>'form','method'=>'PUT')) }}
         <div class="form-group">
     {{Form::label('year', 'Año:')}}
-    {{Form::selectYear('year',1900, 2020,null,array('class' => 'form-control', 'required'=>'required'))}}
+    {{Form::selectYear('year',1970, 2070,null,array('class' => 'form-control', 'required'=>'required'))}}
     
 </div>
 <div class="form-group">

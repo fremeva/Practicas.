@@ -32,7 +32,7 @@ Crear Requisito.
 {{ Form::open(array('url' => 'requisites','role'=>'form')) }}
 <div class="form-group">
     {{Form::label('year', 'Año:')}}
-    {{Form::selectYear('year',1900, 2020,Input::old('year'),array('class' => 'form-control', 'required'=>'required'))}}
+    {{Form::selectYear('year',1970, 2070,Input::old('year'),array('class' => 'form-control', 'required'=>'required'))}}
     
 </div>
 <div class="form-group">

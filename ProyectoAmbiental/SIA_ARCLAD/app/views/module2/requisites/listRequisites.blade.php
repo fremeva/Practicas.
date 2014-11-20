@@ -44,7 +44,7 @@ Requisitos
                 <td>{{$requisite->article}}</td>
                 <td>{{$requisite->aspect->name}}</td>
                 <td>
-                    <a href="{{URL::to('requisites/'.$requisite->id)}}" type="button" class="btn btn-info" ><span class="glyphicon glyphicon-info-sign"></span> info</a>
+                    <a href="{{URL::to('requisites/'.$requisite->id)}}" type="button" class="btn btn-info" ><span class="glyphicon glyphicon-info-sign"></span> Detalle</a>
                     @if(is_null($requisite->evaluation))
                     <span 
                         class="glyphicon glyphicon-warning-sign alert-warning pull-right alertaRequisite"
@@ -66,7 +66,7 @@ Requisitos
 
 <script>
 $(function () { 
-    $("[data-toggle='tooltip']").tooltip()
+    $("[data-toggle='tooltip']").tooltip();
 });
 </script>
 @stop

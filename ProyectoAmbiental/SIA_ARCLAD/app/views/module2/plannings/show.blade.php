@@ -61,11 +61,11 @@ Show Planning
                 </tr>
             </table><!-- Table -->
             
-            <a class="btn btn-info" href="{{URL::to('plannings/'.$planning->id.'/edit')}}"><span class="glyphicon glyphicon-edit"></span> Editar</a>
-            <a class="btn btn-info" href="{{URL::to('evaluations/'.$planning->evaluation_id)}}"><span class="glyphicon glyphicon-edit"></span>Ver Evaluacion</a>
-            <a class="btn btn-info" href="{{URL::to('requisites/'.$planning->evaluation->requisite_id)}}"><span class="glyphicon glyphicon-edit"></span>Ver Requisito</a>
+            <a class="btn btn-default" href="{{URL::to('plannings/'.$planning->id.'/edit')}}"><i class="fa fa-pencil"></i> Editar</a>
+            <a class="btn btn-default" href="{{URL::to('evaluations/'.$planning->evaluation_id)}}"><i class="fa fa-ellipsis-h"></i> Ver Evaluacion</a>
+            <a class="btn btn-default" href="{{URL::to('requisites/'.$planning->evaluation->requisite_id)}}"><i class="fa fa-tag"></i> Ver Requisito</a>
             <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
-            
+            <br /><br />
         </div>
     </div>
     
@@ -85,7 +85,7 @@ Show Planning
                 </div>
                 <div class="modal-body">
                     <p>
-                        Esta seguro de Eliminar la Planeacion.
+                        <strong><span class="text-warning">Esta seguro de Eliminar la Planeacion.</span></strong>
                     </p>
                 </div>
                 <div class="modal-footer">

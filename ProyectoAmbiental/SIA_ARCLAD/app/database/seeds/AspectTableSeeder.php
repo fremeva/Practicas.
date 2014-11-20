@@ -115,10 +115,100 @@ class AspectTableSeeder extends Seeder{
         ));
         
        
+        Aspect::create(array(
+            'id' => 21,
+           'name' => 'Comparendos'
+        ));
         
+        Aspect::create(array(
+            'id' => 22,
+           'name' => 'Construcciones Sanitarias'
+        ));
         
+        Aspect::create(array(
+            'id' => 23,
+           'name' => 'Estándares de Emisión'
+        ));
         
+        Aspect::create(array(
+            'id' => 24,
+           'name' => 'Extracción de Materiales'
+        ));
         
+        Aspect::create(array(
+            'id' => 25,
+           'name' => 'Tala de Árboles'
+        ));
+        
+        Aspect::create(array(
+            'id' => 26,
+           'name' => 'Licencias y Permisos Ambientales'
+        ));
+        
+        Aspect::create(array(
+            'id' => 27,
+           'name' => 'Tasas Retributivas'
+        ));
+        
+        Aspect::create(array(
+            'id' => 28,
+           'name' => 'Tasas por Uso'
+        ));
+        
+        Aspect::create(array(
+            'id' => 29,
+           'name' => 'Reportes Ambientales'
+        ));
+        
+        Aspect::create(array(
+            'id' => 30,
+           'name' => 'Prevención y Control la Contaminación del Agua'
+        ));
+        
+        Aspect::create(array(
+            'id' => 31,
+           'name' => 'Calidad del Agua'
+        ));
+        
+        Aspect::create(array(
+            'id' => 32,
+           'name' => 'Prevención y Control la Contaminación del Aire'
+        ));
+        
+        Aspect::create(array(
+            'id' => 33,
+           'name' => 'Prevención y Control la Contaminación del Suelo'
+        ));
+        
+        Aspect::create(array(
+            'id' => 34,
+           'name' => 'Obligaciones como Usuarios de Servicios Públicos de Agua.'
+        ));
+        
+        Aspect::create(array(
+            'id' => 35,
+           'name' => 'Riesgo de agotamiento de recursos.'
+        ));
+        
+        Aspect::create(array(
+            'id' => 36,
+           'name' => 'Prohibiciones normativas'
+        ));
+        
+        Aspect::create(array(
+            'id' => 37,
+           'name' => 'Acreditaciones'
+        ));
+        
+        Aspect::create(array(
+            'id' => 38,
+           'name' => 'Estímulos Ambientales'
+        ));
+        
+        Aspect::create(array(
+            'id' => 39,
+           'name' => 'Agua Subterránea'
+        ));
         
     }
 }

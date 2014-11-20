@@ -44,7 +44,7 @@
                             </div>
                             {{ Form::close()}}
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -52,4 +52,4 @@
         {{HTML::script('js/jquery.min.js')}}
         {{ HTML::script('js/bootstrap.min.js') }}
     </body>
-</html>>
+</html>

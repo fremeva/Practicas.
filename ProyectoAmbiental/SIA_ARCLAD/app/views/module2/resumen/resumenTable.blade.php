@@ -12,22 +12,22 @@ Resumen Table
 
 @section('content')
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
-  <li role="presentation"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
-  <li role="presentation" class="active"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
-  <li role="presentation" class="pull-right"><a href="{{URL::to('requisites/create')}}">Nuevo Requisito</a></li>
+    <li role="presentation"><a href="{{URL::to('aspects')}}">Aspectos Asociado</a></li>
+    <li role="presentation"><a href="{{URL::to('requisites')}}">Requisitos Legales</a></li>
+    <li role="presentation" class="active"><a href="{{URL::to('resumentable')}}">Ver Resumen</a></li>
+    <li role="presentation" class="pull-right"><a href="{{URL::to('requisites/create')}}">Nuevo Requisito</a></li>
 </ul><br />
 @if (Session::has('message'))
 <div class="alert alert-success">
-                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                {{Session::get('message')}}
-</div>
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    {{Session::get('message')}}
+</div><br />
 @endif
 
 <ul class="nav nav-pills pull-right">
-  <li role="presentation" class="active"><a href="{{URL::to('resumentable')}}">Tabla Completa</a></li>
-  <li role="presentation"><a href="{{URL::to('resumenxaplicacion')}}">Detalle Aplicacion</a></li>
-  <li role="presentation"><a href="{{URL::to('resumenxcumplimiento')}}">Detalle Cumplimiento</a></li>
+    <li role="presentation" class="active"><a href="{{URL::to('resumentable')}}"><i class="fa fa-table"></i> Tabla Completa</a></li>
+    <li role="presentation"><a href="{{URL::to('resumenxaplicacion')}}"> <i class="fa fa-bar-chart"></i> Detalle Aplicacion</a></li>
+    <li role="presentation"><a href="{{URL::to('resumenxcumplimiento')}}"> <i class="fa fa-bar-chart"></i> Detalle Cumplimiento</a></li>
 </ul>
 
 <h1>Resumen</h1>
@@ -47,7 +47,7 @@ Resumen Table
             <th class="text-center">Gestores Ambientales</th>
             <th class="text-center">Solo Informativa</th>
             <th class="text-center">Proveedores</th>
-            
+
             <th class="text-center">Si</th>
             <th class="text-center">No</th>
             <th class="text-center">No Aplica</th>
@@ -55,9 +55,9 @@ Resumen Table
             <th class="text-center">En Implementacion</th>
             <th class="text-center">A Requerirse</th>
         </tr>
-        </thead>
-        <tbody>
-        <?php $indice = 0?>
+    </thead>
+    <tbody>
+        <?php $indice = 0 ?>
         @foreach($aspects as $aspect)
         <tr>
             <td>{{$aspect->name}}</td>
@@ -68,7 +68,7 @@ Resumen Table
             <td>{{$applicationMatriz[$indice]["Gestores Ambientales"]}}</td>
             <td>{{$applicationMatriz[$indice]["Solo Informativa"]}}</td>
             <td>{{$applicationMatriz[$indice]["Proveedores"]}}</td>
-            
+
             <td>{{$complianceMatriz[$indice]["Si"]}}</td>
             <td>{{$complianceMatriz[$indice]["No"]}}</td>
             <td>{{$complianceMatriz[$indice]["No Aplica"]}}</td>
@@ -76,7 +76,7 @@ Resumen Table
             <td>{{$complianceMatriz[$indice]["En Implementacion"]}}</td>
             <td>{{$complianceMatriz[$indice]["A Requerirse"]}}</td>
         </tr>
-        <?php $indice++?>
+        <?php $indice++ ?>
         @endforeach
     </tbody>
 </table>

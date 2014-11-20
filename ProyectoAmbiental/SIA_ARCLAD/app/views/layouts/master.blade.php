@@ -21,11 +21,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{URL::to('/')}}"><em>Sistema Ambiental ARclad S.A</em></a>
+                    <a class="navbar-brand" href="{{URL::to('/index')}}"><em>Sistema Ambiental ARclad S.A</em></a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{URL::to('/')}}"><i class="fa fa-home fa-lg">  </i> Inicio</a></li>
+                        <li><a href="{{URL::to('/index')}}"><i class="fa fa-home fa-lg">  </i> Inicio</a></li>
                         <li class="dropdown">
                             <a  href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-paper-plane-o fa-lg"></i> Planeación Ambiental <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -79,14 +79,12 @@
 
         <div class="container">
             @yield('content')
-            
+
             @section('footer')
             <footer>
                 <p>&copy; Company 2014</p>
             </footer>
             @show
         </div><!--/.container-->
-        
-        
     </body>
 </html>

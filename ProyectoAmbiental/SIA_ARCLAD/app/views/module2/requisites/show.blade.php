@@ -76,18 +76,19 @@ Show Requisite
                 </tr>
             </table><!-- Table -->
             
-            <a class="btn btn-info" href="{{URL::to('requisites/'.$requisite->id.'/edit')}}"><span class="glyphicon glyphicon-edit"></span> Editar</a>
+            <a class="btn btn-default" href="{{URL::to('requisites/'.$requisite->id.'/edit')}}"><i class="fa fa-pencil"></i> Editar</a>
             @if(is_null($requisite->evaluation))
-                <a class="btn btn-info" href="{{URL::to('evaluations/create/'.$requisite->id)}}"><span class="glyphicon glyphicon-edit"></span>Crear Evaluacion</a>
+                <a class="btn btn-default" href="{{URL::to('evaluations/create/'.$requisite->id)}}"><i class="fa fa-ellipsis-h"></i> Crear Evaluacion</a>
             @else
-                <a class="btn btn-info" href="{{URL::to('evaluations/'.$requisite->evaluation->id)}}"><span class="glyphicon glyphicon-edit"></span> Ver Evaluacion</a>
+                <a class="btn btn-default" href="{{URL::to('evaluations/'.$requisite->evaluation->id)}}"><i class="fa fa-ellipsis-h"></i> Ver Evaluacion</a>
                 @if(is_null($requisite->evaluation->planning))
-                    <a class="btn btn-info" href="{{URL::to('plannings/create/'.$requisite->evaluation->id)}}"><span class="glyphicon glyphicon-edit"></span>Crear planeacion</a>
+                    <a class="btn btn-default" href="{{URL::to('plannings/create/'.$requisite->evaluation->id)}}"><i class="fa fa-send"></i> Crear planeacion</a>
                 @else
-                    <a class="btn btn-info" href="{{URL::to('plannings/'.$requisite->evaluation->planning->id)}}"><span class="glyphicon glyphicon-edit"></span>Ver Planeacion</a>
+                    <a class="btn btn-default" href="{{URL::to('plannings/'.$requisite->evaluation->planning->id)}}"><i class="fa fa-send"></i> Ver Planeacion</a>
                 @endif
             @endif
             <a type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-remove"></span> Eliminar</a>
+            <br /><br />
         </div>
     </div>
 </div>
@@ -105,7 +106,7 @@ Show Requisite
                 </div>
                 <div class="modal-body">
                     <p>
-                        Esta seguro de Eliminar Requisito Legal Seleccionado.
+                        Esta seguro de Eliminar Requisito Legal Seleccionado <strong><span class="text-warning"> CUIDADO QUE SE BORRARAN LAS EVALUACI&Oacute;N RELACIONADO</span></strong>.
                     </p>
                 </div>
                 <div class="modal-footer">
